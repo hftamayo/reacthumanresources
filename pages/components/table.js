@@ -1,3 +1,5 @@
+import { BiEdit, BiTrashAlt } from "react-icons/bi";
+
 export default function Table() {
   return (
     <table className="min-w-full table-auto">
@@ -47,6 +49,9 @@ export default function Table() {
               </span>
             </button>
           </td>
+          <td className="px-16 py-2">
+            <button className="cursor"><BiEdit></BiEdit></button>
+          </td>          
         </tr>
       </tbody>
     </table>
