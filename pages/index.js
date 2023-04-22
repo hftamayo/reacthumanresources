@@ -29,8 +29,10 @@ export default function Home() {
         </div>
 
         {/* collapsable form */}
+        <div className="container mx-auto">
         <Form></Form>
-
+        </div>
+        
         {/* table */}
         <div className="container mx-auto">
           <Table></Table>
