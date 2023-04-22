@@ -25,14 +25,14 @@ export default function Home() {
               </span>
             </button>
           </div>
+        </div>
 
-          {/* collapsable form */}
-          </div>
+        {/* collapsable form */}
 
-          {/* table */}
-          <div className="container mx-auto">
-            <Table></Table>
-          </div>
+        {/* table */}
+        <div className="container mx-auto">
+          <Table></Table>
+        </div>
       </main>
     </section>
   );
