@@ -49,9 +49,14 @@ export default function Table() {
               </span>
             </button>
           </td>
-          <td className="px-16 py-2">
-            <button className="cursor"><BiEdit></BiEdit></button>
-          </td>          
+          <td className="px-16 py-2 flex justify-around gap-5">
+            <button className="cursor">
+              <BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit>
+            </button>
+            <button className="cursor">
+              <BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt>
+            </button>            
+          </td>
         </tr>
       </tbody>
     </table>
