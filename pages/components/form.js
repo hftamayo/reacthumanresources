@@ -51,6 +51,27 @@ export default function Form() {
           Active
         </label>
       </div>
+
+      <div className="form-check">
+        <input
+          type="radio"
+          value="Inactive"
+          id="radioDefault2"
+          name="status"
+          className="form-check-input 
+          appearance-none rounded-full h-4 w-4 
+          border border-gray-300 bg-white 
+          checked:bg-green-500 checked:border-green-500 
+          focus:outline-none transition 
+          duration-200 mt-1 align-top bg-no-repeat 
+          bg-center bg-contain float-left mr-2 cursor-pointer"
+        />
+        <label htmlFor="radioDefault2" className="inline-block tet-gray-800">
+          Inactive
+        </label>
+      </div>      
+
+      
     </form>
   );
 }
