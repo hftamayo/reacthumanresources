@@ -41,7 +41,7 @@ export default function Form() {
         />
       </div>
 
-      <div>
+      <div className="flex gap-10 items-center">
         <div className="form-check">
           <input
             type="radio"
