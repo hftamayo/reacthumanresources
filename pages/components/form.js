@@ -33,6 +33,14 @@ export default function Form() {
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
         />
       </div>
+      <div className="input-type">
+        <input
+          type="date"
+          name="date"
+          className="border px-5 py-3 focus:outline-none rounded-md"
+        />
+      </div>
+
       <div>
         <div className="form-check">
           <input
