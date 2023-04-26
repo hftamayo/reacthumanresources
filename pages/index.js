@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         {/* collapsable form */}
-        <div className="container mx-auto">
+        <div className="container mx-auto py-5">
         <Form></Form>
         </div>
         

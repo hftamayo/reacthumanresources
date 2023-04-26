@@ -1,4 +1,15 @@
+import { useReducer } from "react";
+
+const formReducer = (state, event) => {
+  return {
+    ...state,
+    name: event.target.value,
+  };
+};
+
 export default function Form() {
+  const [formData, setFormData] = useReducer(formReducer, {});
+
   return (
     <form className="grid lg:grid-cols-2 w-4/6 gap-4">
       <div className="input-type">
