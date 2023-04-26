@@ -33,6 +33,7 @@ export default function Form() {
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
         />
       </div>
+
       <div className="form-check">
         <input
           type="radio"
@@ -69,9 +70,15 @@ export default function Form() {
         <label htmlFor="radioDefault2" className="inline-block tet-gray-800">
           Inactive
         </label>
-      </div>      
+      </div>
 
-      
+      <button
+        className="flex justify-center text-md w-2/6 bg-green-500 
+      text-white px-4 py-2 border rounded-md hover:bg-gray-50 
+      hover:border-green-500 hover:text-green-500"
+      >
+        Add
+      </button>
     </form>
   );
 }
