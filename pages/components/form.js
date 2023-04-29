@@ -1,4 +1,6 @@
 import { useReducer } from "react";
+import { BiPlus } from "react-icons/bi";
+import Success from "./success";
 
 const formReducer = (state, event) => {
   return {
@@ -12,7 +14,11 @@ export default function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (Object.keys(formData).length == 0)
+      return console.log("error fetching data from the form");
     console.log(formData);
+
+    if (Object.keys(formData).length > 0) <Success></Success>;
   };
 
   return (
@@ -109,6 +115,9 @@ export default function Form() {
       hover:border-green-500 hover:text-green-500"
       >
         Add
+        <span className="px-1">
+          <BiPlus size={24}></BiPlus>
+        </span>
       </button>
     </form>
   );
