@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import { BiPlus } from "react-icons/bi";
 import Success from "./success";
+import Bug from "./bug";
 
 const formReducer = (state, event) => {
   return {
