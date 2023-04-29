@@ -10,7 +10,7 @@ const formReducer = (state, event) => {
   };
 };
 
-export default function Form() {
+export default function AddUserForm() {
   const [formData, setFormData] = useReducer(formReducer, {});
 
   const handleSubmit = (e) => {
