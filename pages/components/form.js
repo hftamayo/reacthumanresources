@@ -18,7 +18,7 @@ export default function Form() {
       return console.log("error fetching data from the form");
     console.log(formData);
   };
-  if (Object.keys(formData).length > 0) return <Success></Success>;
+  if (Object.keys(formData).length > 0) return <Success message={"Data Added"}></Success>;
 
   return (
     <form className="grid lg:grid-cols-2 w-4/6 gap-4" onSubmit={handleSubmit}>
