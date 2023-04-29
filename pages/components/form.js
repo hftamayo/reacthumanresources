@@ -3,18 +3,24 @@ import { useReducer } from "react";
 const formReducer = (state, event) => {
   return {
     ...state,
-    name: event.target.value,
+    [event.target.name]: event.target.value,
   };
 };
 
 export default function Form() {
   const [formData, setFormData] = useReducer(formReducer, {});
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <form className="grid lg:grid-cols-2 w-4/6 gap-4">
+    <form className="grid lg:grid-cols-2 w-4/6 gap-4" onSubmit={handleSubmit}>
       <div className="input-type">
         <input
           type="text"
+          onChange={setFormData}
           name="firstname"
           placeholder="First Name"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
@@ -23,6 +29,7 @@ export default function Form() {
       <div className="input-type">
         <input
           type="text"
+          onChange={setFormData}
           name="lastname"
           placeholder="Last Name"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
@@ -31,6 +38,7 @@ export default function Form() {
       <div className="input-type">
         <input
           type="text"
+          onChange={setFormData}
           name="email"
           placeholder="Email"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
@@ -39,6 +47,7 @@ export default function Form() {
       <div className="input-type">
         <input
           type="text"
+          onChange={setFormData}
           name="salary"
           placeholder="Salary"
           className="border w-full px-5 py-3 focus:outline-none rounded-md"
@@ -47,6 +56,7 @@ export default function Form() {
       <div className="input-type">
         <input
           type="date"
+          onChange={setFormData}
           name="date"
           className="border px-5 py-3 focus:outline-none rounded-md"
         />
@@ -56,6 +66,7 @@ export default function Form() {
         <div className="form-check">
           <input
             type="radio"
+            onChange={setFormData}
             value="Active"
             id="radioDefault1"
             name="status"
@@ -75,6 +86,7 @@ export default function Form() {
         <div className="form-check">
           <input
             type="radio"
+            onChange={setFormData}
             value="Inactive"
             id="radioDefault2"
             name="status"
