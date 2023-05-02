@@ -8,7 +8,7 @@ export default function Home() {
   const [visible, setVisible] = useState(false);
 
   const handler = () =>{
-    setVisible(true);
+    setVisible(visible ? false : true);
   } 
 
 
