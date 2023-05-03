@@ -35,7 +35,7 @@ export default function Table() {
   );
 }
 
-function Tr(id, name, avatar, email, salary, date, status) {
+function Tr({id, name, avatar, email, salary, date, status}) {
   return (
     <tr className="bg-gray-50 text-center">
       <td className="px-16 py-2 flex flex-row items-center">
