@@ -1,4 +1,5 @@
 import { BiEdit, BiTrashAlt } from "react-icons/bi";
+import data from "../database/data.json";
 
 export default function Table() {
   return (
@@ -26,10 +27,9 @@ export default function Table() {
         </tr>
       </thead>
       <tbody className="bg-gray-200">
-        {Tr()}
-        {Tr()}
-        {Tr()}
-        {Tr()}
+        {
+          data.map((obj,i) => <Tr{...obj}key={i} />)
+        }
       </tbody>
     </table>
   );
