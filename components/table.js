@@ -29,32 +29,34 @@ export default function Table() {
         {Tr()}
         {Tr()}
         {Tr()}
-        {Tr()}                        
+        {Tr()}
       </tbody>
     </table>
   );
 }
 
-function Tr() {
+function Tr(id, name, avatar, email, salary, date, status) {
   return (
     <tr className="bg-gray-50 text-center">
       <td className="px-16 py-2 flex flex-row items-center">
-        <img src="#" alt="" />
-        <span className="text-center ml-2 font-semibold">Daily Tuition</span>
+        <img src={avatar || "#"} alt="" />
+        <span className="text-center ml-2 font-semibold">
+          {name || "Unknown"}
+        </span>
       </td>
       <td className="px-16 py-2">
-        <span>hftamayo@gmail.com</span>
+        <span>{email || "Unknown"}</span>
       </td>
       <td className="px-16 py-2">
-        <span>$25000</span>
+        <span>{salary || "Unknown"}</span>
       </td>
       <td className="px-16 py-2">
-        <span>10-05-2022</span>
+        <span>{date || "Unknown"}</span>
       </td>
       <td className="px-16 py-2">
         <button className="cursor">
           <span className="bg-green-500 text-white px-5 py-1 rounded">
-            Active
+            {status || "Unknown"}
           </span>
         </button>
       </td>
