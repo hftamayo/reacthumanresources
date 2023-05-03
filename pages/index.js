@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { BiUserPlus } from "react-icons/bi";
-import Table from "./components/table";
-import Form from "./components/form";
+import Table from "../components/table";
+import Form from "../components/form";
 import { useState } from "react";
 
 export default function Home() {
