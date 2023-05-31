@@ -37,10 +37,10 @@ export async function putUSer(req, res) {
 
     if (userId && formData) {
       await Users.findByIdAndUpdate(userId, formData);
-      res.status(200).json(formData);
+      return res.status(200).json(formData);
     }
-    res.status(404).json({ error: "User not selected!" });
+    return res.status(404).json({ error: "User not selected!" });
   } catch (error) {
-    res.status(404).json({ error: "Error while updating the data" });
+    return res.status(404).json({ error: "Error while updating the data" });
   }
 }
