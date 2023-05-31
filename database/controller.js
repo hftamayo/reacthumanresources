@@ -6,10 +6,12 @@ export async function getUsers(req, res) {
   try {
     const users = Users.find({});
 
-    if (!users) return res.status(404).json({ error: "Data not found" });
-    res.status(200).json(users);
+    if (!users) {
+      return res.status(404).json({ error: "Data not found" });
+    }
+    return res.status(200).json(users);
   } catch (error) {
-    res.status(404).json({ error: "Error while fetching data" });
+    return res.status(404).json({ error: "Error while fetching data" });
   }
 }
 

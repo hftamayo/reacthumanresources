@@ -10,10 +10,12 @@ export default async function handler(req, res) {
 
   switch (method) {
     case "GET":
-      getUsers(req, res);
+      // getUsers(req, res);
+      res.status(200).json({ method, name: "GET Request" });      
       break;
     case "POST":
-      postUser(req, res);
+      res.status(200).json({ method, name: "POST Request" });
+      // postUser(req, res);
       break;
     case "PUT":
       res.status(200).json({ method, name: "PUT Request" });
